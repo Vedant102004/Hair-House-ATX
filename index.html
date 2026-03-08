@@ -47,6 +47,8 @@
   /* ══ PRELOADER ══ */
   #pl{position:fixed;inset:0;background:#060606;z-index:100000;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity .9s var(--ez),visibility .9s}
   #pl.out{opacity:0;visibility:hidden;pointer-events:none}
+  @keyframes plAutoDismiss{0%,80%{opacity:1;visibility:visible;pointer-events:all}100%{opacity:0;visibility:hidden;pointer-events:none}}
+  #pl{animation:plAutoDismiss 4s ease-in-out forwards}
   .pl-logo{font-family:var(--ff);font-size:clamp(2.6rem,5.5vw,5rem);font-weight:900;font-style:italic;letter-spacing:.04em;color:var(--gold);margin-bottom:3rem;text-align:center;animation:glow 2.4s ease-in-out infinite}
   .pl-logo span{display:block;font-family:var(--fb);font-style:normal;font-weight:300;font-size:.28em;letter-spacing:.5em;color:rgba(245,240,232,.4);text-transform:uppercase;margin-top:.6rem}
   @keyframes glow{0%,100%{text-shadow:0 0 30px rgba(197,160,89,.5),0 0 70px rgba(197,160,89,.2)}50%{text-shadow:0 0 80px rgba(197,160,89,1),0 0 160px rgba(197,160,89,.5),0 0 300px rgba(197,160,89,.2)}}
@@ -817,7 +819,7 @@
     </div>
     <div class="team-card rv d2">
       <div class="tc-img">
-        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=800&q=80" alt="Toni Jennings" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=800&q=80" alt="Toni Jennings" loading="lazy">
         <div class="tc-ov"><div>
           <div class="tc-name">Toni Jennings</div>
           <div class="tc-role">Co-Founder · Precision Cuts · Vibrant Color</div>
@@ -1192,7 +1194,7 @@
       <div class="ct-col-h">Find Us</div>
       <ul class="ct-list">
         <li><strong>Address</strong><a href="https://maps.google.com/?q=805+West+Ave+Austin+TX+78705" target="_blank" rel="noopener">805 West Ave #1<br>Austin, TX 78701</a></li>
-        <li><strong>Phone</strong><a href="tel:+17372963420">+1 737-296-3420</a></li><li><strong>Email</strong><a href="mailto:hello.hairhouseatx@gmail.com">hello.hairhouseatx@gmail.com</a></li>
+        <li><strong>Phone</strong><a href="tel:+17372963420">+1 737-296-3420</a></li><li><strong>Email</strong><a href="/cdn-cgi/l/email-protection#2c444940404302444d455e4443595f494d58546c4b414d4540024f4341"><span class="__cf_email__" data-cfemail="83ebe6efefecadebe2eaf1ebecf6f0e6e2f7fbc3e4eee2eaefade0ecee">[email&#160;protected]</span></a></li>
         <li><strong>Booking</strong><span>By appointment only</span></li>
       </ul>
     </div>
@@ -1215,7 +1217,7 @@
   </div>
   <div class="ft-bar">
     <p class="ft-copy">© 2025 Hair House ATX. All rights reserved. Tyler Cochran &amp; Toni Jennings.</p>
-    <div class="ft-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="mailto:hello.hairhouseatx@gmail.com">Contact</a></div>
+    <div class="ft-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="/cdn-cgi/l/email-protection#046c6168686b2a6c656d766c6b71776165707c446369656d682a676b69">Contact</a></div>
   </div>
 </section>
 
@@ -1327,7 +1329,7 @@
 <!-- ═══════════════════════════════════════
      ALL JAVASCRIPT
 ═══════════════════════════════════════ -->
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 /* ────────────────────────────────────────
    PARTICLE CURSOR TRAIL
 ──────────────────────────────────────── */
@@ -1719,7 +1721,7 @@ statEls.forEach(el => countObs.observe(el));
   window.addEventListener('scroll', () => {
     let active = 'hero';
     sections.forEach(id => {
-      const el = document.getElementById(id)
+      const el = document.getElementById(id);
       if (el && el.getBoundingClientRect().top <= 120) active = id;
     });
     bnItems.forEach(a => {
